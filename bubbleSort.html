@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function bubbleSort()
+        {
+            var val1 = document.getElementById("txtOne").value;
+            var val2 = document.getElementById("txtTwo").value;
+            var val3 = document.getElementById("txtThree").value;
+            var val4 = document.getElementById("txtFour").value;
+
+            let value1 = Number(val1);
+            let value2 = Number(val2);
+            let value3 = Number(val3);
+            let value4 = Number(val4);
+
+            let numbers = new Array(value1,value2,value3,value4);
+            let num1 = numbers.length;
+            for(let i = 0; i < num1; i++)
+            {
+                for(let i = 0; i < num1; i++)
+                {
+                    if(numbers[i] > numbers[i +1])
+                    {
+                        var tempNum = numbers[i];
+                        numbers[i] = numbers[i +1];
+                        numbers[i +1] = tempNum;
+                    }
+                }
+            }
+            alert(numbers);
+        }
+    </script>
+
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="txtOne">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <input type="text" id="txtTwo">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="txtThree">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="txtFour">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="bubbleSort()">Press</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
